@@ -22,9 +22,10 @@ const app = await NestFactory.create<NestHonoApplication>(AppModule, new HonoAda
 await app.listen(3000);
 ```
 
-## Ideas From:
+## Ideas From
 
-Officially, NestJS is not working on a Hono integration. According to:
+Officially, NestJS is not working on a Hono integration:
+
 https://github.com/nestjs/nest/issues/13013
 
 https://github.com/nestjs/nest/issues/13073#issuecomment-1902730322
@@ -45,6 +46,7 @@ swapped in.
 ### Problems
 
 For some reason, the response / ctx is not correctly propagated when calling the adapter methods.
-Instead, an async function is passed around, e.g. to the `reply()`.
+Instead, an async function is passed around, e.g. to the `reply()`. Seems to be something like the next() handler
+function.
 
 `getRequestHostname` and co. seem to get the correct HonoContext.
