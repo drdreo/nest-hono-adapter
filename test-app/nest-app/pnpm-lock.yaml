@@ -100,12 +100,7 @@ packages:
             {
                 integrity: sha512-ku+/W/HMCBacSWFppenr9y6Lx8mDuTuQvn1IkTyBLiJOpWnzgVbx9kHDeaDchGa1PwLlJUBBrv27t3qgJOIDPw==,
             }
-        engines:
-            {
-                node: ^18.13.0 || >=20.9.0,
-                npm: ^6.11.0 || ^7.5.6 || >=8.0.0,
-                yarn: ">= 1.13.0",
-            }
+        engines: { node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: ">= 1.13.0" }
         peerDependencies:
             chokidar: ^3.5.2
         peerDependenciesMeta:
@@ -117,12 +112,7 @@ packages:
             {
                 integrity: sha512-bvXykYzSST05qFdlgIzUguNOb3z0hCa8HaTwtqdmQo9aFPf+P+/AC56I64t1iTchMjQtf3JrBQhYM25gUdcGbg==,
             }
-        engines:
-            {
-                node: ^18.13.0 || >=20.9.0,
-                npm: ^6.11.0 || ^7.5.6 || >=8.0.0,
-                yarn: ">= 1.13.0",
-            }
+        engines: { node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: ">= 1.13.0" }
         hasBin: true
 
     "@angular-devkit/schematics@17.1.2":
@@ -130,12 +120,7 @@ packages:
             {
                 integrity: sha512-8S9RuM8olFN/gwN+mjbuF1CwHX61f0i59EGXz9tXLnKRUTjsRR+8vVMTAmX0dvVAT5fJTG/T69X+HX7FeumdqA==,
             }
-        engines:
-            {
-                node: ^18.13.0 || >=20.9.0,
-                npm: ^6.11.0 || ^7.5.6 || >=8.0.0,
-                yarn: ">= 1.13.0",
-            }
+        engines: { node: ^18.13.0 || >=20.9.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: ">= 1.13.0" }
 
     "@babel/code-frame@7.24.6":
         resolution:

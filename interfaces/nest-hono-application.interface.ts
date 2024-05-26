@@ -1,13 +1,12 @@
-import { HttpServer, INestApplication } from '@nestjs/common';
+import { HttpServer, INestApplication } from "@nestjs/common";
 // import type { Server as CoreHttpServer } from 'http';
 // import type { Server as CoreHttpsServer } from 'https';
-import { Hono, HonoRequest } from 'hono';
+import { Hono, HonoRequest } from "hono";
 
 /**
  * @publicApi
  */
-export interface NestHonoApplication<TServer extends Hono = Hono>
-    extends INestApplication<TServer> {
+export interface NestHonoApplication<TServer extends Hono = Hono> extends INestApplication<TServer> {
     /**
      * Starts the application.
      *
@@ -16,20 +15,16 @@ export interface NestHonoApplication<TServer extends Hono = Hono>
      * @param {Function} [callback] Optional callback
      * @returns {Promise} A Promise that, when resolved, is a reference to the underlying HttpServer.
      */
-    listen(port: number | string, callback?: () => void): Promise<TServer>
+    listen(port: number | string, callback?: () => void): Promise<TServer>;
 
-    listen(
-        port: number | string,
-        hostname: string,
-        callback?: () => void,
-    ): Promise<TServer>
+    listen(port: number | string, hostname: string, callback?: () => void): Promise<TServer>;
 
     /**
      * Returns the underlying HTTP adapter bounded to a Hono app.
      *
      * @returns {HttpServer}
      */
-    getHttpAdapter(): HttpServer<HonoRequest, Response, Hono>
+    getHttpAdapter(): HttpServer<HonoRequest, Response, Hono>;
 
     /**
      * Register Fastify body parsers on the fly. Will respect
@@ -57,7 +52,7 @@ export interface NestHonoApplication<TServer extends Hono = Hono>
      * Example `app.useStaticAssets({ root: 'public' })`
      * @returns {this}
      */
-    useStaticAssets(options: HonoStaticOptions): this
+    useStaticAssets(options: HonoStaticOptions): this;
 
     /**
      * Sets a view engine for templates (views).
@@ -66,7 +61,7 @@ export interface NestHonoApplication<TServer extends Hono = Hono>
      *
      * @returns {this}
      */
-    setViewEngine(engine: "jsx"): this
+    setViewEngine(engine: "jsx"): this;
 }
 
-type HonoStaticOptions = any
+type HonoStaticOptions = any;
