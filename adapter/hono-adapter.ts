@@ -90,9 +90,10 @@ export class HonoAdapter extends AbstractHttpAdapter<ServerType> {
         throw new Error("Method not implemented.");
     }
 
-    status(ctx: any, statusCode: StatusCode, ...args) {
+    status(response: any, statusCode: StatusCode) {
         this.logger.debug("status: " + statusCode);
 
+        // TODO: correctly call hono status
         return;
     }
 
